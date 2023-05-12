@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson3</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+        }
+        body{
+            background-color:antiquewhite;
+
+        }
+        .banner{
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+
+        }
+        .banner>h1{
+            font-size: 50px;
+            color:brown;
+            line-height: 100px;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+        .banner>ul{
+            display:flex;
+            gap:20px;
+            list-style-type: none;
+
+        }
+        .banner>ul>li>a:link{
+            background-color: brown;    
+            color:brown;
+            font-size: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .banner>ul>li>a:visited{
+            font-size: 15px;
+            color:white;
+            background-color:brown;
+            padding: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 10px;
+
+        }
+        .banner>ul>li>a:hover{
+            background-color: rgb(220, 70, 70);
+            text-decoration: underline;
+            color: antiquewhite;
+
+
+        }
+           
+
+        article{
+            border:1px solid black;
+            width:calc(25% - 20px);
+            box-sizing: border-box;
+            box-shadow: 5px 5px 5px black;
+        }
+        section{
+            display: flex;
+            flex-wrap:wrap;
+            gap:20px;
+            justify-content: center;
+        }
+        article>header{
+            font-size: 25px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            background-color:brown;
+            color: antiquewhite;
+
+        }
+        img{
+            padding-top: 10px;
+            padding-left: 80px;
+            padding-right: 0px;
+            
+        }
+        article>footer{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            background-color:brown;
+            color:white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+            height: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+        article>figure>figcaption{
+            font-size: 30px;
+            text-align: center;
+            color:brown;
+        }
+        article>footer>span>a:link,article>footer>span>a:visited{
+            font-size: 15px;
+            color:brown;
+            background-color: white;
+            padding: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 10px;     
+        }
+        article>footer>span>a:hover{
+            background-color: blanchedalmond;
+            text-decoration: underline;
+
+        }
+        article>footer>span>a:active{
+            background-color:yellow;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <h1>       
+             The easylearn academy
+        </h1>
+        <ul>
+        <li><a href="#">Home</a></li>    
+        <li><a href="#">About us</a></li>    
+        <li><a href="#">cource</a></li>    
+        <li><a href="#">services</a></li>    
+        <li><a href="#">contact us</a></li>    
+        </ul>
+    </header>
+    <section>
+        
+        <article>
+            <header>
+                java script
+            </header>
+            <figure>
+                <img src="https://picsum.photos/200" alt="">
+                <figcaption>
+                    java script
+                </figcaption>
+            </figure>
+            <footer>
+                <span>Rs 15000</span>
+                <span><a href="#">Read more</a></span>
+            </footer>
+        </article>
+        <article>
+            <header>
+                java script
+            </header>
+            <figure>
+                <img src="https://picsum.photos/200" alt="">
+                <figcaption>
+                    java script
+                </figcaption>
+            </figure>
+            <footer>
+                <span>Rs 15000</span>
+                <span><a href="#">Read more</a></span>
+            </footer>
+        </article>
+        <article>
+            <header>
+                java script
+            </header>
+            <figure>
+                <img src="https://picsum.photos/200" alt="">
+                <figcaption>
+                    java script
+                </figcaption>
+            </figure>
+            <footer>
+                <span>Rs 15000</span>
+                <span><a href="#">Read more</a></span>
+            </footer>
+        </article>
+        <article>
+            <header>
+                java script
+            </header>
+            <figure>
+                <img src="https://picsum.photos/200" alt="">
+                <figcaption>
+                    java script
+                </figcaption>
+            </figure>
+            <footer>
+                <span>Rs 15000</span>
+                <span><a href="#">Read more</a></span>
+            </footer>
+        </article>
+        <article>
+            <header>
+                java script
+            </header>
+            <figure>
+                <img src="https://picsum.photos/200" alt="">
+                <figcaption>
+                    java script
+                </figcaption>
+            </figure>
+            <footer>
+                <span>Rs 15000</span>
+                <span><a href="#">Read more</a></span>
+            </footer>
+        </article>
+        <article>
+            <header>
+                java script
+            </header>
+            <figure>
+                <img src="https://picsum.photos/200" alt="">
+                <figcaption>
+                    java script
+                </figcaption>
+            </figure>
+            <footer>
+                <span>Rs 15000</span>
+                <span><a href="#">Read more</a></span>
+            </footer>
+        </article>
+        <article>
+            <header>
+                java script
+            </header>
+            <figure>
+                <img src="https://picsum.photos/200" alt="">
+                <figcaption>
+                    java script
+                </figcaption>
+            </figure>
+            <footer>
+                <span>Rs 15000</span>
+                <span><a href="#">Read more</a></span>
+            </footer>
+        </article><article>
+            <header>
+                java script
+            </header>
+            <figure>
+                <img src="https://picsum.photos/200" alt="">
+                <figcaption>
+                    java script
+                </figcaption>
+            </figure>
+            <footer>
+                <span>Rs 15000</span>
+                <span><a href="#">Read more</a></span>
+            </footer>
+        </article>
+    </section>
+</body>
+</html>
