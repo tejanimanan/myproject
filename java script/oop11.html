@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>templet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-header">
+                        student info
+                    </div>
+                    <div class="card-body">
+                        <form method="post" id="myform">
+
+                            <div class="mb-3">
+
+                                <label for="name" class="form-label"><b>Name:</b></label>
+                                <input type="text" name="name" placeholder="Enter name" required id="name"
+                                    class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label"><b>Email:</b></label>
+                                <input type="email" name="email" id="email" placeholder="Enter email"
+                                    class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="gender" class="form-label"><b>Select gender </b></label>
+                                <br />
+                                <input type="radio" name="gender" id="male" class="form-check-input">
+                                <label for="male" class="form-check-label">male</label>
+                                <br />
+
+                                <input type="radio" name="gender" id="female" class="form-check-input">
+                                <label for="female" class="form-check-label">female</label>
+
+                            </div>
+
+
+                            <input type="submit" name="submit" value="Add student" class="btn btn-primary">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-header">
+                        Student info table
+                    </div>
+
+                    <div class="card-body">
+
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+
+                                    <th>Sr no</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>gender</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="output">
+
+                            </tbody>
+
+                        </table>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1eb5f37e38.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    
+    <script>
+
+        var submit = document.getElementById("submit");
+        var myform = document.getElementById("myform");
+        var name = document.getElementById("fname");
+        var email = document.getElementById("email");
+        var output = document.getElementById("output");
+        var srno = 1;
+        var tr;
+
+        //create templet
+
+        var student = new Object({
+            name: '',
+            email: '',
+            gender: false,
+            //method
+            Add: function () {
+
+                let row = `<tr><td>${srno}</td><td>${this.name}</td><td>${this.email}</td><td>${this.gender}</td><td><button class='btn btn-warning'>Edit</button></td><td><button class='btn btn-danger'>Delete</button></td></tr>`;
+                   
+                output.innerHTML += row;
+                srno++;
+                name.value = '';
+                email.value = '';
+                let gender = document.getElementsByName("gender");
+                gender.forEach((item) => {
+                    item.checked = false;
+                });
+
+                let deletebutton = document.getElementsByClassName('btn-danger');
+
+                     for(let index=0;index < deletebutton.length;index++){
+            
+                         deletebutton[index].onclick = function(){
+
+                          this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+                         }
+
+                    }
+                let EditButton = document.getElementsByClassName('btn-warning');
+                    
+            }
+        });
+        
+        
+
+        // 2nd technique to handle event
+
+        myform.onsubmit = function () {
+
+            alert('ok successfull insert record');
+            var s1 = student;
+            s1.name = name.value;
+            s1.email = email.value;
+            s1.gender = document.querySelector("input[name='gender']:checked").value;
+            console.log(s1);
+            s1.Add();
+
+            return false;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

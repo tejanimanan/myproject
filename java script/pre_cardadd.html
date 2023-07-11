@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>templet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 py-4">
+
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <h3>cricket player</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" id="myform">
+
+                            <div class="mb-3">
+
+                                <label for="name" class="form-label"><b>Name:</b></label>
+                                <input type="text" name="name1" placeholder="Enter name" required id="name1"
+                                    class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="matches" class="form-label"><b>matches:</b></label>
+                                <input type="number" name="matches" id="matches" placeholder="Enter matches"
+                                    class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Run" class="form-label"><b>Run:</b></label>
+                                <input type="number" name="Run" id="Run" placeholder="Enter total Run"
+                                    class="form-control" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="50Run" class="form-label"><b>50 Run:</b></label>
+                                <input type="number" name="fifty" id="run50" placeholder="Enter 50+ score"
+                                    class="form-control" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="100Run" class="form-label"><b> 100 Run:</b></label>
+                                <input type="number" name="run100" id="run100" placeholder="Enter 100+ score"
+                                    class="form-control" required>
+
+                            </div>
+
+
+
+                            <input type="submit" name="submit" id="submit" value="Add player card"
+                                class="btn btn-primary">
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-9" id="output">
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1eb5f37e38.js" crossorigin="anonymous"></script>
+
+    <script>
+
+        var name1 = document.getElementById("name1");
+        var match = document.getElementById("matches");
+        var run = document.getElementById("Run");
+        var run50 = document.getElementById("run50");
+        var run100 = document.getElementById("run100");
+        var submit = document.getElementById("submit");
+        var form = document.getElementById("myform");
+        var card;
+
+        var player = new Object({
+
+            //method
+            Add: function () {
+
+
+
+                output.innerHTML += `<div class="col-3 py-4 d-inline-flex" >
+          <div class="card bg-warning mt-4 "><div class="card-header "><h2>player</h2></div><div class="card-body"><b class="fs-4">Name:</b><b class="p-3">${this.name1}</b><br/><b class="fs-4">Match:</b><b class="p-3">${this.matches}</b><br/><b class="fs-4">Total:</b><b class="p-3">${this.Run}</b></br><b class="fs-4">50+score:</b><b class="p-3">${this.run50}</b></br><b class="fs-4">100+ score:</b><b class="p-3">${this.run100}</b></br><b class="fs-3"><i class="fa-solid fa-pen-to-square" style="color: #4b51b4;"></i></b><b class="fs-3 p-3"><button id="delete" class="btn btn-warning"><i class="fa-solid fa-trash" style="color: #0e1d61;"></i></button></b></div></div></div>`;
+
+                // delete button
+                let deletebutton = document.getElementById('delete');
+
+                for (let index = 0; index < deletebutton.length; index++) {
+
+                    deletebutton[index].onclick = function () {
+
+                
+                    }
+
+                }
+
+
+            }
+        }
+        );
+
+        myform.onsubmit = function () {
+            // alert('ok');
+            var p1 = player;
+            p1.name1 = name1.value;
+            p1.matches = match.value;
+            p1.Run = run.value;
+            p1.run50 = run50.value;
+            p1.run100 = run100.value;
+            console.log(p1);
+
+            p1.Add();
+            return false;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>example of confirm dialogbox and event</h1>
+    <hr/>
+    <form action="success.html">
+
+        <input type="submit" value="activate subscription" name="activate" onclick="return AcivateSubscription();" />
+
+        <input name="cancel" type="submit" value="cancel subscription"  onclick="return CancelSubscription();" />
+
+    </form>
+    <script>
+        //user defined function 
+        //with return value without argument
+
+        function AcivateSubscription()
+        {
+            // alert("Activate");
+            var response = confirm("Are you sure you want to activate subscription?");
+            return response;
+        }
+
+        //with return value without argument
+
+        function CancelSubscription()
+        {
+            // alert("Cancel");
+            var response = confirm("Are you sure you want to Cancel subscription?");
+            return response;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* internal stylesheet */
+        #red 
+        {
+            height:300px;
+            width:300px;
+            border:1px solid black;
+            background-color: red;
+            margin:auto;
+            margin-top:50px;
+        }
+        #green 
+        {
+            height:200px;
+            width:200px;
+            border:1px solid black;
+            background-color: green;
+            margin:auto;
+            margin-top:50px;
+        }
+        #blue 
+        {
+            height:100px;
+            width:100px;
+            border:1px solid black;
+            background-color: blue;
+            margin:auto;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="red">
+        <div id="green">
+            <div id="blue"></div>
+        </div>
+    </div>
+    <script>
+        var red = document.getElementById('red');
+        var green = document.getElementById('green');
+        var blue = document.getElementById('blue');
+        var redClicked = function(){
+            alert('red clicked');
+        }
+        var greenClicked = function(){
+            alert('green clicked');
+        }
+        var blueClicked = function(){
+            alert('blue clicked');
+        }
+        
+        red.addEventListener('click',redClicked,true);
+        green.addEventListener('click',greenClicked,true);
+        blue.addEventListener('click',blueClicked,true);
+    </script>
+</body>
+</html>

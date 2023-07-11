@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div id="cardContainer" class="container"></div>
+
+  <script>
+    // Sample player data
+    var players = [{
+        name: "Player 1",
+        matches: 10,
+        totalRuns: 500
+      },
+      {
+        name: "Player 2",
+        matches: 15,
+        totalRuns: 800
+      },
+      {
+        name: "Player 3",
+        matches: 12,
+        totalRuns: 600
+      }
+    ];
+
+    // Function to create a Bootstrap card for each player
+    function createPlayerCard(player) {
+      var cardContainer = document.getElementById("cardContainer");
+
+      // Create the card element
+      var card = document.createElement("div");
+      card.className = "card mb-3";
+
+      // Create the card body
+      var cardBody = document.createElement("div");
+      cardBody.className = "card-body";
+
+      // Create player name element
+      var playerName = document.createElement("h5");
+      playerName.className = "card-title";
+      playerName.textContent = player.name;
+
+      // Create player match element
+      var playerMatch = document.createElement("p");
+      playerMatch.className = "card-text";
+      playerMatch.textContent = "Matches: " + player.matches;
+
+      // Create player total runs element
+      var playerTotalRuns = document.createElement("p");
+      playerTotalRuns.className = "card-text";
+      playerTotalRuns.textContent = "Total Runs: " + player.totalRuns;
+
+      // Create edit button
+      var editButton = document.createElement("button");
+      editButton.className = "btn btn-primary";
+      editButton.textContent = "Edit";
+
+      // Create delete button
+      var deleteButton = document.createElement("button");
+      deleteButton.className = "btn btn-danger";
+      deleteButton.textContent = "Delete";
+
+      // Append elements to the card body
+      cardBody.appendChild(playerName);
+      cardBody.appendChild(playerMatch);
+      cardBody.appendChild(playerTotalRuns);
+      cardBody.appendChild(editButton);
+      cardBody.appendChild(deleteButton);
+
+      // Append the card body to the card
+      card.appendChild(cardBody);
+
+      // Append the card to the card container
+      cardContainer.appendChild(card);
+    }
+
+    // Create cards for each player
+    players.forEach(function(player) {
+      createPlayerCard(player);
+    });
+  </script>
+</body>
+
+</html>

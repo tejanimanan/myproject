@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>example of prompt and functions</h1>
+    <hr/>
+    <script>
+        //function functioname
+        //with return value with argument 
+        function add(x,y)
+        {
+            let temp = parseInt(x) + parseInt(y); //local variable(only available to access in function where it is declared)
+            return temp;
+        }
+        function sub(x,y)
+        {
+            let temp = x - y;
+            return temp;
+        }
+        function mul(x,y)
+        {
+            let temp = x * y;
+            return temp;
+        }
+        function div(x,y)
+        {
+            let temp = x / y;
+            return temp;
+        }
+
+
+        var message1 = "enter first number";
+        var message2 = "enter second number";
+        var defaultvalue = "1";
+        var num1 = prompt(message1,defaultvalue);
+        var num2 = prompt(message2,defaultvalue);
+        //call function 
+        var addition = add(num1,num2);
+        alert(`addition = ${addition}`);
+
+        var substraction = sub(num1,num2);
+        alert(`subtraction = ${substraction}`);
+
+        var malti = mul(num1,num2);
+        alert(`maltiplaction = ${malti}`);
+        
+        var division = div(num1,num2);
+        alert(`division = ${division}`);
+        
+    </script>
+</body>
+</html>

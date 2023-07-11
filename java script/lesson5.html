@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-5">
+                    <div class="card-header bg-primary">
+                        <h3>BMI Calculator</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="success.html" onsubmit="return CalculateBMI();">
+                            <div class="mb-3">
+                              <label for="weight" class="form-label">Weight</label>
+                              <input type="number" class="form-control" id="weight" placeholder="Enter weight in kilograms" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="foot" class="form-label">Foot</label>
+                              <input type="number" class="form-control" id="foot" placeholder="Enter foot" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="inch" class="form-label">Inch</label>
+                              <input type="number" class="form-control" id="inch" placeholder="Enter inch" required>
+                            </div>
+                                <button type="submit" class="btn btn-primary">Calculate BMI</button>
+                          </form>
+                          <div id="output" class="my-3">output will come here</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script>
+        var weight = document.getElementById("weight");
+        var foot = document.getElementById("foot");
+        var inch = document.getElementById("inch");
+        var output = document.getElementById("output");
+        function CalculateBMI()
+        {
+            let w = parseInt(weight.value);
+            let f = parseInt(foot.value);
+            let i = parseInt(inch.value);
+            //process
+            let totalinch = (f * 12) + i;
+            let meter = totalinch / 39.37;
+            let bmi = w / (meter * meter);
+            output.innerHTML  = bmi.toFixed(2);
+            output.className = "alert alert-dark p-3 my-3";
+            return false;
+        }
+    </script>
+</body>
+</html>
