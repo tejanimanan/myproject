@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        CDN (Content Delivery Network)
+     -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        @media screen and (max-width: 992px)
+        {
+            .my-box
+            {
+                width: 100% !important;
+                margin:0px;
+                padding:0px;
+            }
+            .navbar
+            {
+                width: 100% !important;
+            }
+            .row, .col-md-12
+            {
+                margin:0px;
+                padding:0px;
+            }
+
+        }
+        /* vertical responsive menu  */
+        @media screen and (min-width: 992px) {
+
+            .navbar .container-fluid,
+            .navbar-expand-lg .navbar-collapse,
+            .navbar-expand-lg .navbar-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar {
+                width: 100%;
+                height: 100vh;
+                align-items: flex-start;
+            }
+
+            .navbar-brand {
+                margin-left: 0.5rem;
+            }
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: #000000;
+            font-size: 1.1em;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- vertical responsive menu -->
+    <div class="container-fluid my-box">
+        <div class="row">
+            <div class="col-md-12 col-lg-3">
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:  #d2cfd2;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand fw-bold" href="#">Responsive menu</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link ">Link</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-9">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maiores autem temporibus
+                            corrupti id cumque, exercitationem corporis facilis ea ratione dolor reprehenderit deleniti
+                            enim rem dolorum magni incidunt eius quibusdam placeat velit quisquam minus mollitia rerum.
+                            Molestias soluta totam sunt adipisci sit accusamus temporibus. Amet exercitationem vel
+                            facilis quia officiis. Dolor voluptates esse delectus dolorum eum consectetur iure sed ab,
+                            quia ad ipsum repudiandae aliquid id doloremque. Quam quaerat ipsum deleniti, corrupti
+                            reiciendis suscipit sed illo magnam sequi expedita fugiat dolor. Labore repellendus
+                            recusandae nisi magni harum sequi quasi, assumenda in ex necessitatibus dolorem rem
+                            reprehenderit magnam culpa architecto eos libero asperiores porro optio modi sunt. Nihil,
+                            dicta ipsam debitis minus eaque commodi veniam. Distinctio dolorem ducimus, reprehenderit
+                            consectetur expedita, voluptatibus vitae aperiam deleniti sint quos quia! Fugit numquam
+                            ratione quia blanditiis maxime, hic recusandae at inventore nobis temporibus,
+                            necessitatibus, soluta tempora? Obcaecati nemo assumenda cupiditate deserunt, autem nesciunt
+                            tempore omnis minus commodi explicabo eius doloribus? Cumque cupiditate neque dolorem
+                            provident, amet praesentium ut! Voluptatum quos vitae quas quibusdam, cum hic ex, dolores
+                            molestiae sit vero, pariatur expedita alias a culpa rerum praesentium enim perspiciatis!
+                            Deleniti, quidem. Dicta, beatae sit dolorem explicabo ex repellendus ipsam illo illum
+                            veritatis praesentium itaque!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- vertical responsive menu -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4f0edd0835.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
